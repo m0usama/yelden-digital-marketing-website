@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #020202;
+  --foreground: #f7f7f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+::selection {
+  color: #020202;
+  background: #ffd21e;
+}
+
+.section-padding {
+  @apply px-5 sm:px-8 lg:px-16 py-20 lg:py-28;
+}
+
+.container-width {
+  @apply max-w-7xl mx-auto;
+}
+
+.heading-xl {
+  @apply text-5xl sm:text-6xl lg:text-8xl font-black tracking-[-0.06em] leading-[0.95];
+}
+
+.heading-lg {
+  @apply text-4xl sm:text-5xl lg:text-7xl font-black tracking-[-0.045em] leading-tight;
+}
+
+.eyebrow {
+  @apply text-yelden-yellow uppercase tracking-[0.25em] text-xs sm:text-sm font-black;
+}
+
+.card {
+  @apply bg-yelden-panel border border-yelden-line;
+}
+
+.yellow-button {
+  @apply inline-flex items-center justify-center bg-yelden-yellow text-black font-black uppercase tracking-wide px-6 py-4 transition duration-300 hover:-translate-y-1 hover:shadow-glow;
+}
+
+.dark-button {
+  @apply inline-flex items-center justify-center border border-white/15 text-white font-black uppercase tracking-wide px-6 py-4 transition duration-300 hover:-translate-y-1 hover:border-yelden-yellow hover:text-yelden-yellow;
+}
+
+@keyframes heroSlide {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+
+.animate-heroSlide {
+  animation: heroSlide 15s infinite;
+}
