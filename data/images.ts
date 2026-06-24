@@ -47,3 +47,21 @@ export const promotionalImages = [
   "/images/promotional/promo-3.webp",
   "/images/promotional/promo-4.webp",
 ];
+
+export const webPortfolioImages = [
+  "/images/portfolio/web/web-1.png",
+  "/images/portfolio/web/web-2.png",
+  "/images/portfolio/web/web-3.png",
+  "/images/portfolio/web/web-4.png",
+  "/images/portfolio/web/web-5.png",
+  "/images/portfolio/web/web-6.png",
+  "/images/portfolio/web/web-7.png",
+  "/images/portfolio/web/web-8.png",
+];
+
+export const socialPortfolioImages = [
+  "/images/portfolio/social/social-1.png",
+  "/images/portfolio/social/social-2.png",
+  "/images/portfolio/social/social-3.png",
+  "/images/portfolio/social/social-4.png",
+];
