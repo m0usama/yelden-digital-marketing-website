@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Yelden Digital Marketing Ltd provides website design, maintenance, SEO, Google Ads, PPC, social media management, branding, content marketing and promotional materials.",
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.png",
   },
   openGraph: {
     title: "Yelden Digital Marketing Ltd",

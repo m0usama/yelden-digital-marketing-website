@@ -2,11 +2,43 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Monitor, Megaphone, PenTool } from "lucide-react";
+import {
+  Menu,
+  X,
+  Monitor,
+  Megaphone,
+  PenTool,
+  Instagram,
+  Facebook,
+  Linkedin,
+} from "lucide-react";
 import { useState } from "react";
 
 const navLinkClass =
   "text-sm font-black uppercase tracking-wider text-white/75 transition hover:text-yelden-yellow";
+
+const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/yeldendigitalmarketing",
+    icon: Instagram,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/people/Yelden-Digital-Marketing-LTD/61591448369755/",
+    icon: Facebook,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ali-haydar-yelden-67716241b/",
+    icon: Linkedin,
+  },
+  {
+    label: "X",
+    href: "https://x.com/yeldendigital21",
+    icon: X,
+  },
+];
 
 const webLinks = [
   { label: "Website Design", href: "/services/web" },
@@ -69,7 +101,7 @@ export function Header() {
           {open ? <X size={30} /> : <Menu size={30} />}
         </button>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -182,6 +214,25 @@ export function Header() {
             Contact
           </Link>
 
+          <div className="flex items-center gap-3 border-l border-white/10 pl-2">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="text-white/60 transition hover:-translate-y-0.5 hover:text-yelden-yellow"
+                >
+                  <Icon size={18} />
+                </a>
+              );
+            })}
+          </div>
+
           <Link href="/contact" className="yellow-button py-5 text-sm">
             Get a Quote
           </Link>
@@ -245,6 +296,25 @@ export function Header() {
             >
               Contact
             </Link>
+
+            <div className="flex items-center gap-4 pt-2">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="text-white/70 transition hover:text-yelden-yellow"
+                  >
+                    <Icon size={22} />
+                  </a>
+                );
+              })}
+            </div>
 
             <Link
               href="/contact"
